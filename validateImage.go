@@ -3,6 +3,9 @@ package validateImage
 import (
 	"errors"
 	"image"
+	_ "image/gif"
+	_ "image/jpeg"
+	_ "image/png"
 	"mime/multipart"
 )
 
