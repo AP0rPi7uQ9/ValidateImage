@@ -6,9 +6,9 @@ import (
 	"mime/multipart"
 )
 
-func ValidateImage(f multipart.File) (string, error) {
+func ValidateImage(f *multipart.File) (string, error) {
 	// 识别图片类型
-	_, image_type, _ := image.Decode(f)
+	_, image_type, _ := image.Decode(*f)
 
 	// 获取图片的类型
 	switch image_type {
